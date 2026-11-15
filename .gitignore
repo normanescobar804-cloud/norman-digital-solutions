@@ -1,3 +1,6 @@
 node_modules/
 data.db
+data.json
+.env
+.env.*
 npm-debug.log*

@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 	const form = document.getElementById('contactForm');
 	const status = document.getElementById('formStatus');
-	// Reemplaza este correo por el tuyo para recibir solicitudes
-	const RECEIVER = 'TU_EMAIL@example.com';
 
 	if (!form) return;
 
@@ -19,29 +17,31 @@ document.addEventListener('DOMContentLoaded', function () {
 			return;
 		}
 
-		// Intentar enviar a la API local; si falla, caer al mailto
+		const submitButton = form.querySelector('button[type="submit"]');
+		submitButton.disabled = true;
+		status.textContent = 'Enviando solicitud...';
+		status.dataset.state = 'loading';
+
 		try {
 			const res = await fetch('/api/requests', {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
 				body: JSON.stringify({ name, email, subject, message })
 			});
-			if (res.ok) {
-				status.textContent = 'Solicitud enviada. Gracias.';
-				status.style.color = 'green';
-				form.reset();
-				return;
-			} else {
-				const err = await res.json();
-				throw new Error(err.error || 'Error en envío');
-			}
-		} catch (err) {
-			// Fallback: abrir mailto
-			const body = `Nombre: ${name}%0D%0ACorreo: ${email}%0D%0A%0D%0A${encodeURIComponent(message)}`;
-			const mailto = `mailto:${RECEIVER}?subject=${encodeURIComponent(subject)}&body=${body}`;
-			status.textContent = 'No se pudo enviar al servidor. Abriendo cliente de correo...';
-			status.style.color = 'orange';
-			window.location.href = mailto;
+			const result = await res.json();
+			if (!res.ok) throw new Error(result.error || 'No se pudo enviar la solicitud.');
+
+			status.textContent = 'Solicitud enviada. Gracias; pronto me pondré en contacto contigo.';
+			status.dataset.state = 'success';
+			form.reset();
+		} catch (error) {
+			console.error('No se pudo enviar la solicitud de contacto:', error);
+			status.textContent = error instanceof Error
+				? error.message
+				: 'No se pudo enviar la solicitud. Inténtalo de nuevo o contáctame por WhatsApp.';
+			status.dataset.state = 'error';
+		} finally {
+			submitButton.disabled = false;
 		}
 	});
 });

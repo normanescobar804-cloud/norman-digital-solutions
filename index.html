@@ -3,97 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Norman Escobar - Asesorías Académicas</title>
-
+    <meta name="description" content="Asesorías académicas y tecnológicas de Norman Escobar para estudiantes universitarios. Tutorías, programación y orientación para proyectos.">
+    <meta name="theme-color" content="#10233f">
+    <title>Norman Escobar | Asesoría académica y tecnológica</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <section class="inicio">
-
-    <div class="texto">
-        <h2>Bienvenido a Norman Escobar</h2>
-
-        <p>
-            Asesorías académicas y tecnológicas para estudiantes
-            universitarios que desean aprender, crecer y alcanzar
-            sus metas profesionales.
-        </p>
-
-        <button>Solicitar Asesoría</button>
-    </div>
-
-    <div class="imagen">
-        <img src="images/cefb5ba8-9794-45d8-995d-286d03696812.jpg" alt="Norman Escobar - Asesorías" class="hero-img">
-    </div>
-
-    <!-- Botón flotante de WhatsApp -->
-    <a href="https://wa.me/50358898311" target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp">Enviar mensaje</a>
-
-</section>
+    <header class="site-header">
+        <div class="nav-container">
+            <a class="brand" href="#inicio" aria-label="Norman Escobar, inicio">
+                <span class="brand-mark" aria-hidden="true">N</span>
+                <span>Norman Escobar</span>
+            </a>
+            <nav class="site-nav" aria-label="Navegación principal">
+                <a href="#sobre-mi">Sobre mí</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#proceso">Cómo trabajo</a>
+                <a class="nav-cta" href="#contacto">Hablemos</a>
+            </nav>
+        </div>
     </header>
 
     <main>
-       <section class="servicios">
+        <section class="hero section-wrap" id="inicio">
+            <div class="hero-copy">
+                <p class="eyebrow"><span></span> Asesoría académica y tecnológica</p>
+                <h1>Aprende, crea y avanza con <span>confianza.</span></h1>
+                <p class="hero-description">
+                    Acompañamiento práctico para estudiantes universitarios en tutorías,
+                    programación y proyectos académicos.
+                </p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#contacto">Solicitar asesoría <span aria-hidden="true">↗</span></a>
+                    <a class="text-link" href="#servicios">Conoce mis servicios <span aria-hidden="true">↓</span></a>
+                </div>
+                <p class="hero-note">Atención cercana, explicaciones claras y apoyo enfocado en tus objetivos.</p>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image-frame">
+                    <img src="images/cefb5ba8-9794-45d8-995d-286d03696812.jpg" alt="Norman Escobar">
+                </div>
+                <div class="image-caption">
+                    <span class="caption-dot" aria-hidden="true"></span>
+                    <span>Aprendizaje con propósito</span>
+                </div>
+            </div>
+            <a href="https://wa.me/50558898311" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Contactar a Norman por WhatsApp">
+                <span aria-hidden="true">↗</span> WhatsApp
+            </a>
+        </section>
 
-    <h2>Nuestros Servicios</h2>
+        <section class="about section-wrap" id="sobre-mi">
+            <div class="section-heading">
+                <p class="eyebrow"><span></span> Sobre mí</p>
+                <h2>Un apoyo claro para tus retos académicos.</h2>
+            </div>
+            <div class="about-copy">
+                <p>
+                    Soy Norman Escobar y ofrezco asesorías académicas y tecnológicas
+                    para estudiantes universitarios. Mi objetivo es ayudarte a comprender
+                    los temas y avanzar en tus proyectos con orientación práctica.
+                </p>
+                <ul class="value-list">
+                    <li><span aria-hidden="true">01</span> Explicaciones paso a paso</li>
+                    <li><span aria-hidden="true">02</span> Apoyo según tu objetivo</li>
+                    <li><span aria-hidden="true">03</span> Enfoque en aprender haciendo</li>
+                </ul>
+            </div>
+        </section>
 
-    <div class="contenedor-servicios">
+        <section class="services section-pad" id="servicios">
+            <div class="section-wrap">
+                <div class="section-heading section-heading-centered">
+                    <p class="eyebrow"><span></span> Servicios</p>
+                    <h2>¿En qué puedo ayudarte?</h2>
+                    <p>Orientación personalizada para que avances con más claridad y seguridad.</p>
+                </div>
+                <div class="service-grid">
+                    <article class="service-card">
+                        <span class="card-number">01</span>
+                        <div class="service-icon" aria-hidden="true">Aa</div>
+                        <h3>Tutorías</h3>
+                        <p>Refuerza temas universitarios y comprende conceptos con explicaciones a tu ritmo.</p>
+                        <a href="#contacto">Consultar <span aria-hidden="true">↗</span></a>
+                    </article>
+                    <article class="service-card service-card-featured">
+                        <span class="card-number">02</span>
+                        <div class="service-icon service-icon-code" aria-hidden="true">&lt;/&gt;</div>
+                        <h3>Programación</h3>
+                        <p>Apoyo para aprender y practicar HTML, CSS, JavaScript, Python y otros lenguajes.</p>
+                        <a href="#contacto">Consultar <span aria-hidden="true">↗</span></a>
+                    </article>
+                    <article class="service-card">
+                        <span class="card-number">03</span>
+                        <div class="service-icon service-icon-doc" aria-hidden="true">≡</div>
+                        <h3>Proyectos y documentos</h3>
+                        <p>Orientación para organizar informes, presentaciones y proyectos académicos.</p>
+                        <a href="#contacto">Consultar <span aria-hidden="true">↗</span></a>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-        <div class="tarjeta">
-            <h3>📚 Tutorías</h3>
-            <p>Apoyo personalizado para comprender mejor cada tema.</p>
-        </div>
+        <section class="projects section-pad" id="proyectos">
+            <div class="section-wrap">
+                <div class="section-heading section-heading-centered">
+                    <p class="eyebrow"><span></span> Proyecto destacado</p>
+                    <h2>Trabajo que puedes conocer.</h2>
+                    <p>Un proyecto web publicado para un negocio local.</p>
+                </div>
+                <article class="project-card">
+                    <a class="project-preview" href="https://normanescobar804-cloud.github.io/" target="_blank" rel="noopener noreferrer" aria-label="Visitar el sitio de El Clóset de Jié V2">
+                        <img src="https://normanescobar804-cloud.github.io/portada.jpg" alt="Vista previa del sitio web de El Clóset de Jié V2" loading="lazy">
+                        <span class="project-preview-link">Ver sitio <span aria-hidden="true">↗</span></span>
+                    </a>
+                    <div class="project-details">
+                        <p class="project-category">Tienda en línea · Nicaragua</p>
+                        <h3>El Clóset de Jié V2</h3>
+                        <p>
+                            Sitio web para presentar ropa nueva y usada, peluches, ofertas y novedades,
+                            con acceso sencillo a consultas y pedidos por WhatsApp.
+                        </p>
+                        <ul class="project-tags" aria-label="Características del proyecto">
+                            <li>JavaScript</li>
+                            <li>Tienda en línea</li>
+                            <li>GitHub Pages</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://normanescobar804-cloud.github.io/" target="_blank" rel="noopener noreferrer">
+                                Visitar sitio <span aria-hidden="true">↗</span>
+                            </a>
+                            <a href="https://github.com/normanescobar804-cloud/normanescobar804-cloud.github.io" target="_blank" rel="noopener noreferrer">
+                                Ver código <span aria-hidden="true">↗</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
 
-        <div class="tarjeta">
-            <h3>💻 Programación</h3>
-            <p>Asesoría en HTML, CSS, JavaScript, Python y otros lenguajes.</p>
-        </div>
+        <section class="process section-wrap" id="proceso">
+            <div class="process-intro">
+                <p class="eyebrow"><span></span> Cómo trabajo</p>
+                <h2>Un proceso sencillo, enfocado en ti.</h2>
+                <p>Cuéntame qué necesitas y definimos juntos el mejor camino para avanzar.</p>
+                <a class="button button-light" href="#contacto">Cuéntame tu reto <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="process-steps">
+                <article class="process-step">
+                    <span>01</span>
+                    <div>
+                        <h3>Conversamos</h3>
+                        <p>Me explicas el tema, la materia o el proyecto en el que necesitas apoyo.</p>
+                    </div>
+                </article>
+                <article class="process-step">
+                    <span>02</span>
+                    <div>
+                        <h3>Definimos el objetivo</h3>
+                        <p>Acordamos qué quieres aprender o resolver durante la asesoría.</p>
+                    </div>
+                </article>
+                <article class="process-step">
+                    <span>03</span>
+                    <div>
+                        <h3>Avanzamos paso a paso</h3>
+                        <p>Trabajamos en la solución y reforzamos tu comprensión del tema.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
 
-        <div class="tarjeta">
-            <h3>📄 Documentos</h3>
-            <p>Orientación para elaborar informes, presentaciones y proyectos.</p>
-        </div>
+        <section class="faq section-pad">
+            <div class="section-wrap faq-layout">
+                <div class="section-heading">
+                    <p class="eyebrow"><span></span> Preguntas frecuentes</p>
+                    <h2>Antes de empezar.</h2>
+                    <p>¿Tienes otra pregunta? Escríbeme y conversamos.</p>
+                    <a class="text-link" href="https://wa.me/50558898311" target="_blank" rel="noopener noreferrer">Contactar por WhatsApp <span aria-hidden="true">↗</span></a>
+                </div>
+                <div class="faq-list">
+                    <details>
+                        <summary>¿Qué tipo de asesorías ofreces?</summary>
+                        <p>Tutorías, apoyo para aprender programación y orientación en documentos y proyectos académicos.</p>
+                    </details>
+                    <details>
+                        <summary>¿La asesoría se adapta a mi nivel?</summary>
+                        <p>Sí. Cuéntame qué tema estás trabajando y qué necesitas comprender para enfocar el apoyo en tu objetivo.</p>
+                    </details>
+                    <details>
+                        <summary>¿Cómo puedo solicitar una asesoría?</summary>
+                        <p>Completa el formulario de contacto o envíame un mensaje por WhatsApp con una breve descripción de lo que necesitas.</p>
+                    </details>
+                    <details>
+                        <summary>¿Haces los trabajos por el estudiante?</summary>
+                        <p>La asesoría se enfoca en guiarte para que comprendas los temas y desarrolles tus propios trabajos y proyectos.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
 
-    </div>
+        <section class="contact section-pad" id="contacto">
+            <div class="section-wrap contact-layout">
+                <div class="contact-copy">
+                    <p class="eyebrow"><span></span> Contacto</p>
+                    <h2>Empecemos por tu objetivo.</h2>
+                    <p>Cuéntame qué necesitas y me pondré en contacto contigo para conversar sobre la asesoría.</p>
+                    <a class="contact-whatsapp" href="https://wa.me/50558898311" target="_blank" rel="noopener noreferrer">
+                        También puedes escribirme por WhatsApp <span aria-hidden="true">↗</span>
+                    </a>
+                </div>
+                <form id="contactForm" class="contact-form">
+                    <label for="name">Nombre <span>*</span></label>
+                    <input type="text" id="name" name="name" autocomplete="name" required>
 
-</section> 
-        <section class="inicio">
-            <h2>Bienvenido</h2>
-            <p>
-                Te ayudamos a aprender mediante tutorías, asesorías académicas,
-                programación y apoyo en diferentes áreas universitarias.
-            </p>
+                    <label for="email">Correo electrónico <span>*</span></label>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
 
-            <button>Solicitar Asesoría</button>
+                    <label for="subject">¿En qué necesitas apoyo?</label>
+                    <input type="text" id="subject" name="subject" placeholder="Ej. Tutoría de programación">
+
+                    <label for="message">Cuéntame un poco más <span>*</span></label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button class="button button-primary" type="submit">Enviar solicitud <span aria-hidden="true">↗</span></button>
+                    <p id="formStatus" class="form-status" aria-live="polite"></p>
+                </form>
+            </div>
         </section>
     </main>
 
-       <section id="contact" class="contact">
-            <h2>Solicitar Asesoría</h2>
-            <form id="contactForm" class="contact-form">
-                <label for="name">Nombre *</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Correo electrónico *</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="subject">Asunto</label>
-                <input type="text" id="subject" name="subject">
-
-                <label for="message">Mensaje *</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-
-                <button type="submit">Enviar solicitud</button>
-                <p id="formStatus" class="form-status" aria-live="polite"></p>
-            </form>
-        </section>
-
-    <footer>
-        <p>&copy; 2026 Norman Escobar. Todos los derechos reservados.</p>
+    <footer class="site-footer">
+        <div class="section-wrap footer-content">
+            <a class="brand footer-brand" href="#inicio">
+                <span class="brand-mark" aria-hidden="true">N</span>
+                <span>Norman Escobar</span>
+            </a>
+            <p>Asesoría académica y tecnológica para avanzar con confianza.</p>
+            <span class="copyright">&copy; 2026 Norman Escobar</span>
+        </div>
     </footer>
 
     <script src="script.js"></script>
-
 </body>
 </html>

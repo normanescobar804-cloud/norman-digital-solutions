@@ -56,10 +56,26 @@
       if (res.status===401){ loginStatus.textContent='No autorizado'; return; }
       const data = await res.json();
       const tbody = document.querySelector('#requestsTable tbody');
-      tbody.innerHTML = '';
+      tbody.replaceChildren();
       data.requests.forEach(r => {
         const tr = document.createElement('tr');
-        tr.innerHTML = `<td>${r.id}</td><td>${r.name}</td><td>${r.email}</td><td>${r.subject||''}</td><td>${r.message}</td><td class="status-${r.status}">${r.status}</td><td><button onclick="update(${r.id},'resolved')">Marcar resuelta</button></td>`;
+        [r.id, r.name, r.email, r.subject || '', r.message].forEach(value => {
+          const cell = document.createElement('td');
+          cell.textContent = String(value);
+          tr.appendChild(cell);
+        });
+
+        const statusCell = document.createElement('td');
+        statusCell.className = r.status === 'resolved' ? 'status-resolved' : 'status-new';
+        statusCell.textContent = r.status;
+        tr.appendChild(statusCell);
+
+        const actionsCell = document.createElement('td');
+        const resolveButton = document.createElement('button');
+        resolveButton.textContent = 'Marcar resuelta';
+        resolveButton.addEventListener('click', () => update(r.id, 'resolved'));
+        actionsCell.appendChild(resolveButton);
+        tr.appendChild(actionsCell);
         tbody.appendChild(tr);
       });
     }
